@@ -1,0 +1,11 @@
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment folders
+env/
+venv/
+
+# Ignore environment and requirements files
+requirements.txt
+environment.yml
