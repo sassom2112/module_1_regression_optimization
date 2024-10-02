@@ -5,7 +5,8 @@ This repository contains all the files and documentation related to a class proj
 ### 1. Data Source
 The dataset used in this project was provided as part of the course. The main task was to use this data to compare the manual fitting of a regression line to the automatic fitting provided by modern libraries.
 
-## Data File: data/Module_1_Assignment_Spreadsheet.xlsx
+## Data File Location: 
+data/Module_1_Assignment_Spreadsheet.xlsx
 ### 2. Manual vs Automatic Fitting
 The first objective was to manually optimize a linear regression model using gradient descent. The goal was to gain an in-depth understanding of how the optimization process works by implementing it from scratch.
 After manually stepping through the optimization process, I abstracted away the complexity by utilizing the scikit-learn library to fit the same model automatically.
