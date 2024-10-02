@@ -1,1 +1,1 @@
-![Structure of Directory](img/strucutre.png)
+![Structure of Directory](./img/strucutre.png)
