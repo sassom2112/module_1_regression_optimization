@@ -1,58 +1,74 @@
 # Module 1: Regression Optimization
-This repository contains all the files and documentation related to a class project where we explored different approaches to linear regression optimization. The main focus was comparing manual gradient descent fitting with automatic fitting using Python's scikit-learn library. Additionally, a detailed paper was written to outline the step-by-step process of building and optimizing a linear regression model using gradient descent.
 
-## Project Overview
-### 1. Data Source
-The dataset used in this project was provided as part of the course. The main task was to use this data to compare the manual fitting of a regression line to the automatic fitting provided by modern libraries.
+This repository compares manual linear regression training with gradient descent against automatic fitting using scikit-learn. It includes a manual implementation, a library-backed implementation, and a paper documenting the model optimization process.
 
-## Data File Location: 
-data/Module_1_Assignment_Spreadsheet.xlsx
-### 2. Manual vs Automatic Fitting
-The first objective was to manually optimize a linear regression model using gradient descent. The goal was to gain an in-depth understanding of how the optimization process works by implementing it from scratch.
-After manually stepping through the optimization process, I abstracted away the complexity by utilizing the scikit-learn library to fit the same model automatically.
-### 3. Step-by-Step Paper
-A detailed paper was written to document the linear regression model fitting process, including the theory and the application of gradient descent optimization. This document provides an extensive guide on how the optimization was performed manually and the results obtained.
+## Project overview
 
-## Paper:
-docs/LaTeX/main.tex - The source LaTeX file for the written paper.
-docs/PDF_Step_by_Step.pdf - The compiled PDF version of the step-by-step guide.
-### 4. Code Implementation
-I implemented the theory in code by writing two Python scripts to demonstrate the different approaches:
+- Data file: `data/Module_1_Assignment_Spreadsheet.xlsx`
+- Manual gradient descent: `src/Manually_Handling_GD.py`
+- Automatic fitting with scikit-learn: `src/Scikit_Learn_Handling_GD.py`
+- Paper source: `docs/LaTeX/main.tex`
+- Paper PDF: `docs/PDF_Step_by_Step.pdf`
 
-## Manual Fitting:
-**src/Manually_Handling_GD.py**: This Python script contains the manual implementation of linear regression using gradient descent. The script steps through each iteration of the optimization process, allowing for a better understanding of how the parameters are adjusted to minimize the cost function.
-##Automatic Fitting:
-**src/Scikit_Learn_Handling_GD.py**: This Python script leverages the scikit-learn library to perform linear regression automatically. Using scikit-learn significantly reduced the amount of code required, enhancing the project's maintainability and readability.
+## What this repo demonstrates
 
-# Project Structure
-![Structure of Directory](./img/structure.png)
+- Manual optimization of a linear regression model using gradient descent
+- Comparison of custom training vs. scikit-learn's `LinearRegression`
+- Visualizing the regression line and convergence behavior
+- Measuring fit quality with standard metrics
 
-# How to Use this Repository
-## 1. Clone the repository:
+## Requirements
 
-```bash
-git clone https://github.com/sassom2112/module_1_regression_optimization.git
-```
+This project requires:
 
-## 2.Set up the environment: Install the required dependencies using Conda by running:
+- Python 3.10+ or a modern Conda environment
+- `numpy`
+- `pandas`
+- `matplotlib`
+- `scikit-learn`
+- `openpyxl`
+
+## Setup
+
+### Option 1: Conda
 
 ```bash
 conda env create -f environment.yml
+conda activate gradient-descent-gd
 ```
-**Alternatively**, install the required Python packages using pip:
+
+### Option 2: pip
 
 ```bash
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
-## 3. Run the code:
-### For manual gradient descent optimization:
+
+## Running the examples
+
+### Manual gradient descent
+
 ```bash
 python src/Manually_Handling_GD.py
 ```
-### For scikit-learn's automatic fitting:
+
+### scikit-learn linear regression
+
 ```bash
 python src/Scikit_Learn_Handling_GD.py
 ```
 
-### 4. View the paper:
-You can find the step-by-step math behind usintg linear regressions in the docs folder as a PDF file (PDF_Step_by_Step.pdf) or as a LaTeX file (main.tex).
+## Notes
+
+- The manual implementation is intentionally verbose to show the gradient descent update and cost calculation.
+- The scikit-learn script demonstrates the same regression problem with a tested library implementation and evaluation metrics.
+- If the dataset path changes, update `file_path` inside the scripts or pass a path from the command line.
+
+## Visuals
+
+![Project structure](./img/structure.png)
+
+![Data source spreadsheet preview](./img/Module_1_Assignment_Spreadsheet.png)
+
+![Regression model optimization: manual vs automated](./img/Regression Model Optimization_ Manual vs Automated.png)
